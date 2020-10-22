@@ -6,9 +6,9 @@
     <view>{{region}}</view>
   </picker>
   <!-- 区域2：文本，温度+天气 -->
-  <text>{{temperature}}°C {{weather}}</text>
+  <text>{{now.temp}}°C {{now.text}}</text>
   <!-- 区域3：图片， -->
-  <image src="/images/{{imgSrcIcon}}.png"></image>
+  <image src="/images/{{now.icon}}.png"></image>
   <!--区域3：信息-->
   <view class="detail">
     <view class="bar"> 
@@ -17,9 +17,9 @@
       <view class="box">能见度</view>
     </view>
     <view class="bar"> 
-      <view class="box">{{humidity}}%</view>
-      <view class="box">{{airPressure}}hPa</view>
-      <view class="box">{{visibility}}km</view>
+      <view class="box">{{now.humidity}}%</view>
+      <view class="box">{{now.pressure}}hPa</view>
+      <view class="box">{{now.vis}}km</view>
     </view>
     <view class="bar"> 
       <view class="box">风向</view>
@@ -27,9 +27,9 @@
       <view class="box">风速</view>
     </view>
     <view class="bar"> 
-      <view class="box">{{windDirection}}</view>
-      <view class="box">{{windForce}}级</view>
-      <view class="box">{{WindSpeed}}km/h</view>
+      <view class="box">{{now.windDir}}</view>
+      <view class="box">{{now.windScale}}级</view>
+      <view class="box">{{now.windSpeed}}km/h</view>
     </view>
   </view>
 </view>

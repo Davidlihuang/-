@@ -5,33 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-      region:["北京市", "北京市", "东城区"],
-      imgSrcIcon: "999",
-      weather: '未知',
-      temperature: 0,
-      humidity:0,
-      airPressure:0,
-      visibility:0,
-      windDirection: 0,
-      windForce:0,
-      WindSpeed:0,
-      //now:'',
+      region:["北京市", "北京市", "朝阳区"],
+      now:'',
       locationId: '',
-
-
   },
 
   //picker绑定函数，改变地区
   changeRegion:function(event) {
     this.setData({
       region:event.detail.value,
-      code: event.detail.code
     })
+   // this.getLocationId();
     this.getWeather();
   },
-  //访问API,获取天气信息
-  getWeather:function(){
-    var that = this;
+  //getlocationId
+  getLocationId:function(){
+     var that = this;
     //获取地级市的ID
     wx.request({
       url: 'https://geoapi.qweather.com/v2/city/lookup?',
@@ -46,6 +35,11 @@ Page({
         })
       },
     })
+  },
+  //访问API,获取天气信息
+  getWeather:function(){
+    var that= this;
+    this.getLocationId();
     //获取当前地级市的天气
     wx.request({
       url: 'https://devapi.qweather.com/v7/weather/now?',
@@ -55,16 +49,7 @@ Page({
       },
       success:function(info) {
         that.setData({
-          //now:info,
-          temperature: info.data.now.temp,
-          weather: info.data.now.text,
-          humidity: info.data.now.humidity,
-          airPressure:info.data.now.pressure,
-          visibility:info.data.now.vis,
-          windDirection: info.data.now.windDir,
-          windForce:info.data.now.windScale,
-          WindSpeed:info.data.now.windSpeed,
-          imgSrcIcon:info.data.now.icon
+          now:info.data.now
         })
       },
     })
@@ -74,21 +59,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getWeather();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
- 
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
   },
 
   /**
