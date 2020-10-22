@@ -1,2 +1,6 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class='container'>
+  <image src="{{src}}">微信图标</image>
+  <text>{{name}}</text>
+  <button open-type="getUserInfo" bindgetuserinfo="getMyInfo" class = "button1">点击获取头像和昵称</button>
+  <progress> 下载进度 </progress>
+</view>

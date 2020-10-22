@@ -2,5 +2,13 @@
   "pages": [
     "pages/index/index"
   ],
+  "window": {
+    "navigationBarBackgroundColor": "#663399",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "第一个小程序",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
   "sitemapLocation": "sitemap.json"
 }

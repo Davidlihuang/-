@@ -1,1 +1,19 @@
 /* pages/index/index.wxss */
+.container{
+  height: 100vh; /*高100的视窗 vh*/
+  display: flex; /*flex布局方法*/
+  flex-direction: column; /*垂直布局*/
+  align-items: center;  /*水平方向居中*/
+  justify-content: space-around; /*垂直方向分散布局*/
+}
+
+image{
+  width: 375rpx;
+  height: 375rpx;
+  border-radius: 50%;
+}
+
+text{
+  font-size: 60;
+  color: burlywood;
+}

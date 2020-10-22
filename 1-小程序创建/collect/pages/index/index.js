@@ -5,9 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      src: "/images/微信图标.png",
+      name: "hello world"
   },
-
+  getMyInfo: function(info) {
+    console.log(info.detail.userInfo);
+    let myInfo = info.detail.userInfo;
+    this.setData({
+        name: myInfo.nickName,  //更新名称
+        src: myInfo.avatarUrl //更新图片来源
+    }) 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
