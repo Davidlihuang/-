@@ -1,0 +1,6 @@
+和风天气
+账号：huanglixianhui@163.com
+密码：************
+keyName: 天气小程序 keyID: HE2010221610201741 key:4ef09dcbad214bfdba1fe6cc62cf4907
+URL: https://devapi.qweather.com/v7/weather/now?location=116.4,39.1&key=4ef09dcbad214bfdba1fe6cc62cf4907
+https://geoapi.qweather.com/v2/city/lookup?location=beijing&key=4ef09dcbad214bfdba1fe6cc62cf4907
