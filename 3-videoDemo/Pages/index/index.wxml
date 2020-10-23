@@ -1,0 +1,16 @@
+<!--Pages/index/index.wxml-->
+<!-- <text>Pages/index/index.wxml</text> -->
+<!-- 视频播放器区域 -->
+<video id = "myVideo" controls="videoControls" class="videoArea" src="{{src}}" enable-danmu, danmu-btn> </video>
+<!-- 弹幕区域 -->
+<view class="Barrage">
+  <input type = "text" placeholder="请输入弹幕" bindinput="getDanMuFunc" class="BarrageInput" ></input>
+  <button class="sendButton" bindtap="sendDanmuFunc">发送弹幕</button>
+</view>
+<!-- 视频列表 -->
+<view class= "videoList">
+  <view class = "videoBar" wx:for="{{list}}" wx:key="video{{index}}" data-url="{{item.videoUrl}}" bindtap="playVideoFunc"> 
+    <image src ="/images/timg.jpg"></image>
+    <text class="videNameListText">{{item.title}}</text>
+  </view>
+</view>

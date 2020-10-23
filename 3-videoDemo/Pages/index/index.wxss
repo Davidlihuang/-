@@ -1,0 +1,43 @@
+/* Pages/index/index.wxss */
+.videoArea{
+  width: 100%;
+}
+.Barrage{
+  display: flex;
+  flex-direction: row;
+}
+.BarrageInput{
+  height: 100rpx;
+  border: 1rpx solid rgb(118, 118, 243); /*边框区域*/
+  flex-grow: 1; /*扩展多余空间*/
+}
+.sendButton{
+  height: 100rpx;
+  color: white;
+  background-color: yellowgreen;
+}
+.videoList{
+  width: 100%;
+  min-height: 400rpx; /*最小高度*/
+  display: flex;
+  flex-direction: column;
+}
+.videoBar{
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid yellowgreen;
+  margin: 2rpx;
+  background-color: rgb(163, 147, 150);
+}
+.videNameListText{
+  font-size: 45rpx;
+  color: rgb(148, 248, 66);
+  margin: 20rpx;
+  flex-grow: 1; /*扩展多余空间*/
+}
+image{
+  height: 70rpx;
+  width: 70rpx;
+  margin: 20rpx;
+}

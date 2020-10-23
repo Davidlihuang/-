@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "Pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#eeeeee",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "视频播放器",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}
